@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body{
+    
+  font-family: Times New Roman;  
+}
+
+
+.popup{
+    background-color:lightblue; 
+    width: 50%;
+    padding: 40px 50px;
+    position: fixed;
+     transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border: 2px outset #2f0898;
+    border-radius: 1px 20px;
+    display: none; 
+    z-index: 1;
+    font-family: Corbel;
+}
+.popup button
+{
+     display: block;
+    margin:  0 0 20px auto;
+    font-size: 20px;
+    padding: 10px 10px;
+    color: #ffffff;
+    background: #2f0898;
+    border-radius:1px 25px;
+    cursor: pointer;
+}
+
+
+.popup1{
+    background-color:lightblue; 
+    width: 50%;
+    padding: 30px 40px;
+    position: fixed;
+     transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border: 2px outset #2f0898;
+    border-radius: 1px 20px;
+    display: none; 
+    z-index: 1;
+    font-family: Corbel;
+}
+.popup1 button
+{
+     display: block;
+    margin:  0 0 20px auto;
+    font-size: 20px;
+    padding: 10px 10px;
+    color: #ffffff;
+    background: #2f0898;
+    border-radius:1px 25px;
+    cursor: pointer;
+}
+
+
+
+.parallax {
+background-image: url("img/main.jpeg");
+min-height: 500px; 
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: auto;
+width:100%;
+height:30%;
+z-index: -1;
+}
+
+
+
+.manu{
+    overflow:hidden;
+    background-color: DarkGray;
+
+     }
+.manu a{
+            
+    float: left;
+    color:#f2f2f2;
+    text-align:center;
+    padding:14px  16px;
+    text-decoration:none;
+    font-size:17px;
+    border-radius: 1px 25px;
+    }
+.manu a:hover{
+      background-color:silver;
+      color: black;
+    }
+.manu a.active{
+    border-radius: 1px 25px; 
+    border: 2px outset #2f0898;
+    background-color:green;
+      color: white;
+    }
+.manu a.active:hover{
+      background-color:#009911;
+      color: black;
+    }
+.manu button{
+    float:right;
+    margin-right: 20px;
+    border:2px outset #2f0898;
+    border-radius: 1px 25px;
+    background-color: green;
+}    
+     
+   .option img{
+        position: relative;
+        border: 3px outset #2f0898;
+        border-radius: 1px 25px; 
+        margin: auto;
+        padding: 8px 8px;
+        animation: b_change 9s infinite linear; 
+}
+
+.text{
+         color: #darkbalck; /* Fallback */
+  animation: c_change 9s infinite linear;
+}
+
+  @keyframes c_change{
+  0%   { color: darkblack; }
+  20%  { color: darkgreen; }
+  60%  { color: darkblue; }
+  100% { color:darkblack; }
+}
+  @keyframes b_change {
+  0%   { border-color: darkblack; }
+  20%  { border-color: darkgreen; }
+  40%  { border-color: purple; }
+  60%  { border-color: violet; }
+  80%  { border-color: darkblue; }
+  100% { border-color:darkblack; }
+}
+.option h2{
+    font-size: 200%;
+}
+    
+.end{
+
+    background-color:black;
+    border:2px solid white;
+    padding:10px 10px;
+}
+.end h1{
+    color:white;
+     font-family: Times New Roman;
+      font-size:20px;
+       text-align:center;
+}
+
+.end table{
+  width:100%;
+  border:2px soid red;
+  color:white;
+  text-align:center;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body bgcolor="lightgrey">
+
+<div class="popup">
+      
+    <button id="close">&times;</button>
+     <fieldset>
+<legend><h1>Registration Form</h1></legend>
+<form id="registrationForm" action="insert.php" method="post" autocomplete="off">
+      <lable>Firstname:</lable><input type="text" name="fname" placeholder="Firstname is your username" required><br><br>
+      <lable>Lastname:</lable><input type="text" name="lname" required><br><br>
+      <lable>Email id:</lable><input type="email" name="email" placeholder="Enter the valid email id" required><br><br>
+      <lable>Password:</lable><input type="password" name="password" placeholder="Enter hard password" required><br><br>
+        <button id="save" >Register</button>
+    </form>
+       </fieldset>
+
+</div>
+<div class="popup1">
+      
+    <button id="close1">&times;</button>
+     <fieldset>
+<legend> <h1>Login Form</h1></legend>
+ <form id="loginForm" autocomplete="off" action="get.php" method="post">
+        <label >Username:</label><input type="text"  name="username" placeholder="Firstname is your username" required><br><br>
+        <label >Password:</label><input type="password" name="password" required><br><br>
+           <button id="save1">login</button>
+           </form>
+         </fieldset>
+
+    
+
+</div>
+
+
+<section id="home"></section>
+<div class="parallax"></div>
+<div><center>
+
+<span class="welcome"><h1 style="font-family:Kunstler Script;text-align: center; font-size:40px; color: #2f0898; border-radius: 15px 50px; border: 2px outset #2f0898;"><a href="main.html" style="text-decoration: none;">Welcome To The Event Organizer<a></h1><span>
+
+ <hr><br>       
+
+<div class="manu">
+        <a class="active" href="#home">Home</a>
+        <a href="#work">How it"s work</a>
+        <a href="#event">Events</a>
+        <a href="#about">About</a>
+        <a href="#help">Help</a>
+
+        <span>
+               <button id="res"><a>Register</a></button>
+               <button id="lo"><a>Login</a></button>
+        </span>
+        
+</div>
+<br>
+
+<section id="work"></section>
+<div style="border: 5px outset #2f0898;">
+<video style="width:100%; height:25%" autoplay loop muted>
+  <source src="img/vid.mp4" type="video/mp4">
+</video>
+
+</div>
+</div>
+<br><br>
+
+
+<section id="event"></section>
+<div class=" option"><center>
+        <h2>The Available Events For The Booking. </h2>
+        <hr>
+        <table style="border: 2px solid pink;">
+
+
+
+
+
+
+<tr>
+        <td style="padding: 5% 5%; ">
+                <centre><a href="web.php" ><img src="img/wed.jpeg"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Wedding</marquee></h1></centre><hr></a><br><br>
+Modes: Standard Synonyms: Try Sample Text Paste Text QuillBot's AI-powered paraphrasing tool will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td>
+
+</tr>
+
+
+
+
+
+<tr>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Cultural Events</marquee></h1></centre><hr></a><br><br>
+Such as concerts, festivals, art exhibitions, theater performances, etc. will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td> 
+        <td style="padding: 5% 5%; ">
+<centre><a href="web.php" ><img src="img/puja.webp"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+</tr>
+
+
+
+
+<tr>
+        <td style="padding: 5% 5%; ">
+                <centre><a href="web.php" ><img src="img/social.png"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">social event</marquee></h1></centre><hr></a><br><br>
+Such as parties, weddings, birthdays, reunions, etc. will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td> 
+</tr>
+
+
+
+
+
+
+<tr>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Business Events</marquee></h1></centre><hr></a><br><br>
+Such as conferences, seminars, workshops, meetings, etc. Text QuillBot's AI-powered paraphrasing tool will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td> 
+        <td style="padding: 5% 5%; ">
+<centre><a href="web.php" ><img src="img/Business.jpg"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+</tr>
+
+
+        <td style="padding: 5% 5%; ">
+                <centre><a href="web.php" ><img src="img/Sporting.jpg"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Sporting Events</marquee></h1></centre><hr></a><br><br>
+Such as games, matches, tournaments, races ,hackathon etc. Try Sample Text Paste Text QuillBot's AI-powered paraphrasing tool will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td> 
+</tr>
+
+
+
+
+
+
+<tr>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Educational Events</marquee></h1></centre><hr></a><br><br>
+Such as lectures, classes, training sessions, etc. Paste Text QuillBot's AI-powered paraphrasing tool will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td> 
+        <td style="padding: 5% 5%; ">
+<centre><a href="web.php" ><img src="img/Educational.jpg"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+</tr>
+
+
+        <td style="padding: 5% 5%; ">
+                <centre><a href="web.php" ><img src="img/Community.png"  height="60%" width="60%"></img><br><br><br><br><hr></a>
+        </td>
+        <td style="padding:1%; font-family: Corbel;">
+<p><h1  class="text"><marquee behavior="alternate">Community Events</marquee></h1></centre><hr></a><br><br>
+Such as fundraisers, volunteer activities, charity events, etc.Text QuillBot's AI-powered paraphrasing tool will enhance your writing Your words matter, and our paraphrasing tool is designed to ensure you use 
+</p>
+        </td> 
+</tr>
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+<section id="about"></section>
+<div class="end">
+        <h1> Hello , I am vivek sapkale creater of this website which help to make your event amazing . provide different kind of event option </h1>
+        <br><hr>
+
+        <table>
+                <tr>
+                <td style="width: 35%;">  <h1>EVENT ORGANIZER:</h1><br>
+                    <p style="text-align: justify;">EVENT ORGSANIZER Pvt Ltd is passionate about crafting charmingly timeless and elegant luxurious weddings and events at stunning venues throughout the world. As the leading wedding designers and event organisers in Delhi and Gurgaon, we are renowned to create authentic experiences worth cherishing for a lifetime.</p></td>
+
+                <td style="width: 50%;"> <h1>CONTACT US:</h1>
+                        <p >contact us for any help or more information related event organizing<br>
+                            <b> location: </b>  Laxmisagar, BBSR, Bhubaneshwar-751006 <br><br>
+                        <b>Email:</b> vivek@gamil.com <br>
+                        <b>Mobile No.:</b> 123456789
+
+                        </p> 
+                </td>
+
+                <td><p><a href="#" class="fa fa-facebook"></a></p> <p><a href="#" class="fa fa-twitter"></a></p><p><a href="#" class="fa fa-instagram"></a></p><p><a href="#" class="fa fa-whatsapp "></a></p>
+                <p><a href="#" class="fa fa-telegram "></a></p> <p><a href="#" class="fa fa-snapchat "></a></p></tr>
+
+</table>
+              <p style="color:green; font-size: 10px; float:right">Copyright 2023 by WEBHOST000.All Rights Reserved.</p>
+
+</div>
+<section id="help"></section>
+
+<script>
+let popupDisplayed = false;
+window.addEventListener("load", function(){
+    if (!popupDisplayed) {
+        setTimeout(function() {
+            document.querySelector(".popup").style.display = "block";
+            popupDisplayed = true;
+        }, 2000);
+    }
+});
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+    alert("please , fill Registration form ")
+});
+
+
+document.querySelector("#close1").addEventListener("click", function(){
+    document.querySelector(".popup1").style.display = "none";
+    alert("please , fill login form ")
+});
+
+document.querySelector("#lo").addEventListener("click", function(){
+    document.querySelector(".popup1").style.display = "block";
+    document.querySelector(".popup").style.display = "none";
+});
+
+document.querySelector("#res").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "block";
+     document.querySelector(".popup1").style.display = "none";
+   
+});</script>
+
+
+
+
+</body>
+</html>
